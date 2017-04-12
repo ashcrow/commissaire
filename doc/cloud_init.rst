@@ -3,9 +3,9 @@
 Cloud-Init Integration
 ======================
 
-Commissaire provides a ``commctl`` command to generate ``user-data`` file
-that automatically registers hosts to the Commissaire server during
-bootup. This command is aptly named ``user-data``.
+Commissaire provides a ``commctl`` command to generate a ``user-data`` file
+for ``cloud-init`` that automatically registers hosts to the Commissaire
+server during bootup. This command is aptly named ``user-data``.
 
 
 commctl user-data command
@@ -34,7 +34,7 @@ You would create the ``user-data`` file like so:
      --username USER \
      --cluster CLUSTER \
      --endpoint https://example.com/ \
-     CLUSTER.userdata
+     --outfile CLUSTER.userdata
    Password: <PASS>
    $ # Let's check that the userdata file is indeed a multipart/mixed file
    $ file CLUSTER.userdata
